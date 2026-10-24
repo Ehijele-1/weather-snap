@@ -54,31 +54,49 @@ function getWeatherDescription(code) {
   if (code === 0) {
     weatherCode.textContent = "Clear sky";
     emoji.textContent = "☀️";
-  } else if (code === 1) {
+  }
+
+  else if (code === 1) {
     weatherCode.textContent = "Mainly clear";
     emoji.textContent = "🌤️";
-  } else if (code === 2) {
+  }
+
+  else if (code === 2) {
     weatherCode.textContent = "Partly cloudy";
     emoji.textContent = "⛅";
-  } else if (code === 3) {
+  }
+
+  else if (code === 3) {
     weatherCode.textContent = "Overcast";
     emoji.textContent = "☁️";
-  } else if (code === 45 || code === 48) {
+  }
+
+  else if (code === 45 || code === 48) {
     weatherCode.textContent = "Foggy";
     emoji.textContent = "🌫️";
-  } else if (code >= 51 && code <= 57) {
+  }
+
+  else if (code >= 51 && code <= 57) {
     weatherCode.textContent = "Drizzle";
     emoji.textContent = "🌦️";
-  } else if (code >= 61 && code <= 67) {
+  }
+
+  else if (code >= 61 && code <= 67) {
     weatherCode.textContent = "Rain";
     emoji.textContent = "🌧️";
-  } else if (code >= 71 && code <= 77) {
+  }
+
+  else if (code >= 71 && code <= 77) {
     weatherCode.textContent = "Snow";
     emoji.textContent = "❄️";
-  } else if (code >= 80 && code <= 82) {
+  }
+
+  else if (code >= 80 && code <= 82) {
     weatherCode.textContent = "Rain showers";
     emoji.textContent = "🌦️";
-  } else if (code >= 95) {
+  }
+
+  else if (code >= 95) {
     weatherCode.textContent = "Thunderstorm";
     emoji.textContent = "⛈️";
   }
@@ -110,13 +128,19 @@ form.addEventListener("submit", async function (event) {
     const coordinates = await getCoordinates(cityName);
     const weather = await getWeather(coordinates.latitude, coordinates.longitude);
     displayWeather(weather, cityName);
-  } catch (error) {
+  } 
+  
+  catch (error) {
     if (error.message.includes("Failed to fetch")) {
       serverMessage.textContent = "Please check your internet connection and try again.";
-    } else {
+    } 
+    
+    else {
       serverMessage.textContent = error.message;
     }
-  } finally {
+  } 
+  
+  finally {
     loading.textContent = "";
   }
 });
