@@ -90,7 +90,7 @@ form {
 .errorMessage,
 .serverMessage,
 .loading {
-    min-height: 22px;
+    min-height: 15px;
     margin: 0 0 12px;
     font-size: 0.95rem;
 }
@@ -169,10 +169,6 @@ form {
 @media (max-width: 520px) {
     .weather-shell {
         padding: 20px 16px 16px;
-    }
-
-    form {
-        flex-direction: column;
     }
 
     .brand {
