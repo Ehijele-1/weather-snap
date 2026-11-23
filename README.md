@@ -1,7 +1,10 @@
 # WeatherSnap
 
-Live link: myweather-snap.netlify.app
 A simple, good-looking weather app. Search for any city and instantly see its current temperature, conditions, humidity, and wind speed. Built with vanilla HTML, CSS, and JavaScript, with no frameworks or API keys needed.
+
+## Live Link
+
+myweather-snap.netlify.app
 
 ## Features
 
